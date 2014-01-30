@@ -10,6 +10,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
+import android.widget.Button;
+import android.widget.TextView;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 public class MainActivity extends Activity {
 
@@ -23,6 +27,26 @@ public class MainActivity extends Activity {
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
         }
+        setTheme(android.R.style.Theme_Holo);
+        Button b1;
+        Button b2;
+        b1 = (Button) findViewById(R.id.btnIn);
+        b2=(Button) findViewById((R.id.btnOut));
+
+        View.OnClickListener pressHandler = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TextView txtDisplayIn;
+                txtDisplayIn = (TextView) findViewById(R.id.txtIn);
+                if (txtDisplayIn.getText() == ("Test")){
+                    txtDisplayIn.setText("Pressed already");
+                }else{
+                    txtDisplayIn.setText("Test");
+                }
+
+            }
+        };
+        b1.setOnClickListener(pressHandler);
     }
 
 
@@ -59,6 +83,7 @@ public class MainActivity extends Activity {
                 Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             return rootView;
+
         }
     }
 

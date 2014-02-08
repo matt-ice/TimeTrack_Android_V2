@@ -14,8 +14,14 @@ import android.widget.Button;
 import android.widget.TextView;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Date;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.util.Log;
 
 public class MainActivity extends Activity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,22 +37,36 @@ public class MainActivity extends Activity {
         Button b1;
         Button b2;
         b1 = (Button) findViewById(R.id.btnIn);
-        b2=(Button) findViewById((R.id.btnOut));
+        b2 = (Button) findViewById((R.id.btnOut));
 
-        View.OnClickListener pressHandler = new View.OnClickListener() {
+        View.OnClickListener pressHandlerIn = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Date currentDate = new Date();
+                DateFormat simpleDF = new SimpleDateFormat("hh:mm");
+                String tempDate = simpleDF.format(currentDate);
                 TextView txtDisplayIn;
                 txtDisplayIn = (TextView) findViewById(R.id.txtIn);
-                if (txtDisplayIn.getText() == ("Test")){
-                    txtDisplayIn.setText("Pressed already");
-                }else{
-                    txtDisplayIn.setText("Test");
-                }
+                txtDisplayIn.setText(tempDate);
+
 
             }
         };
-        b1.setOnClickListener(pressHandler);
+        View.OnClickListener pressHandlerOut = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Date currentDate = new Date();
+                DateFormat simpleDF = new SimpleDateFormat("hh:mm");
+                String tempDate = simpleDF.format(currentDate);
+                TextView txtDisplayOut;
+                txtDisplayOut = (TextView) findViewById(R.id.txtOut);
+                txtDisplayOut.setText(tempDate);
+            }
+        };
+
+
+        b1.setOnClickListener(pressHandlerIn);
+        b2.setOnClickListener(pressHandlerOut);
     }
 
 

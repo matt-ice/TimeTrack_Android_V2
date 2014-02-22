@@ -66,10 +66,12 @@ public class MainActivity extends Activity {
         View.OnClickListener pressHandlerIn = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String tempDate = getCurrentTime();
-                txtDisplayIn.setText(tempDate);
                 SharedPreferences shPrefs = getSharedPreferences(myPrefs,0);
                 SharedPreferences.Editor editor = shPrefs.edit();
+                editor.clear();
+                editor.commit();
+                String tempDate = getCurrentTime();
+                txtDisplayIn.setText(tempDate);
                 editor.putString("punchIn",txtDisplayIn.getText().toString());
                 txtDisplayOut.setVisibility(View.INVISIBLE);
                 txtDisplayOutDesc.setVisibility(View.INVISIBLE);

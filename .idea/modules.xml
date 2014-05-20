@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TimeTrack_Android_V2/TimeTrack_Android_V2.iml" filepath="$PROJECT_DIR$/TimeTrack_Android_V2/TimeTrack_Android_V2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/TimeTrack_Android_V2Project.iml" filepath="$PROJECT_DIR$/TimeTrack_Android_V2Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TimeTrack_Android_V2.iml" filepath="$PROJECT_DIR$/TimeTrack_Android_V2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TimeTrack_Android_V2/TimeTrack_Android_V2-TimeTrack_Android_V2.iml" filepath="$PROJECT_DIR$/TimeTrack_Android_V2/TimeTrack_Android_V2-TimeTrack_Android_V2.iml" />
     </modules>
   </component>
 </project>

@@ -7,8 +7,8 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/TimeTrack_Android_V2" />
+            <option value="C:\Users\Michal\Documents\GitHub\TimeTrack_Android_V2" />
+            <option value="C:\Users\Michal\Documents\GitHub\TimeTrack_Android_V2\TimeTrack_Android_V2" />
           </set>
         </option>
       </GradleProjectSettings>

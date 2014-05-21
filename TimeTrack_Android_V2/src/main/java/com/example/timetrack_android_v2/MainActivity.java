@@ -19,12 +19,11 @@ import org.w3c.dom.Text;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-/*
+
 import android.database.sqlite.SQLiteDatabase;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.util.Log;
-*/
 
 public class MainActivity extends Activity {
 
